@@ -1,0 +1,95 @@
+.header {
+    background: linear-gradient(to bottom, #000000 , rgba(0, 0, 0, 0));
+    position: absolute;
+    width: 100%;  
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.contenido {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .contenido {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+.contenidoMovil {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 1rem;
+}
+
+.imgPerfil {
+    width: 30%;
+    grid-column: 4 / 5;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .contenidoMovil {
+        display: none;
+    }
+}
+
+.logo {
+    width: 50%;
+}
+
+.navegacion  {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+}
+
+.navegacion a {
+    flex: 1 0 auto;
+    color: #fff;
+    font-size: 1.7rem;
+    transition: all .3s ease;
+} 
+
+.navegacion a:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.opciones {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    
+    .opciones {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 2rem;
+        margin-right: 2rem;
+        color: #fff;
+    }
+    
+    .opciones p {
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+    .opciones div {
+        cursor: pointer;
+    }
+    
+    .opciones img {
+        cursor: pointer;
+    }
+
+}
