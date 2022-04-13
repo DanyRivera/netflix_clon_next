@@ -1,13 +1,22 @@
+import { useContext } from "react"
+import AppContext from "../context/AppContext"
+import ListadoPeliculas from "../components/ListadoPeliculas"
 import Layout from "../components/Layout"
 
 const MyList = () => {
+
+  const {miLista} = useContext(AppContext)
+
   return (
-    
+
     <Layout
-        pagina="My List"
+      pagina="My List"
     >
 
-    <h1>Mi lista</h1>
+      <ListadoPeliculas 
+        peliculas={miLista}
+        tematica="My Lista"
+      />
 
     </Layout>
 

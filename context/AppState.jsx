@@ -7,26 +7,27 @@ import {
 
 const AppSatate = (props) => {
 
-    const initialState = {
-      miLista : []
-    }
+  const initialState = {
+    miLista: []
+  }
 
-    const [state, dispatch] = useReducer(AppReducer, initialState);
+  const [state, dispatch] = useReducer(AppReducer, initialState);
 
-    const setLista = pelicula => {
-      dispatch({
-        type: AGREGAR_PELICULA,
-        payload: pelicula
-      })
-    }
+  const setLista = pelicula => {
+    dispatch({
+      type: AGREGAR_PELICULA,
+      payload: pelicula
+    })
+  }
 
   return (
     <AppContext.Provider
-        value={{
-            setLista
-        }}
+      value={{
+        miLista: state.miLista,
+        setLista
+      }}
     >
-        {props.children}
+      {props.children}
     </AppContext.Provider>
   )
 }

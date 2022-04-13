@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import AppContext from '../context/AppContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPlus, faThumbsUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
@@ -7,7 +9,12 @@ const ListadoPeliculas = ({ peliculas, heading, tematica }) => {
 
     const peliculasArr = peliculas.Search;
 
-    // console.log(peliculasArr);
+    const { setLista } = useContext(AppContext);
+
+    // const handleClick = (pelicula) => {
+
+    //     console.log(pelicula)
+    // }
 
     return (
 
@@ -20,7 +27,7 @@ const ListadoPeliculas = ({ peliculas, heading, tematica }) => {
                 <div
                     className={styles.listado}
                 >
-                    {peliculasArr.map(pelicula => (
+                    {peliculas.Search.map(pelicula => (
                         <div
                             key={pelicula.imdbID}
                             className={styles.pelicula}
@@ -31,17 +38,23 @@ const ListadoPeliculas = ({ peliculas, heading, tematica }) => {
 
                                 <div className={styles.opciones}>
 
-                                    <FontAwesomeIcon className={styles.icon} icon={faPlay} />
+                                    <button>
+                                        <FontAwesomeIcon className={styles.icon} icon={faPlay} />
+                                    </button>
 
                                     <button
-                                        // onClick={e => }
+                                    onClick={() => setLista(pelicula)}
                                     >
                                         <FontAwesomeIcon className={styles.icon} icon={faPlus} />
                                     </button>
 
-                                    <FontAwesomeIcon className={styles.icon} icon={faThumbsUp} />
+                                    <button>
+                                        <FontAwesomeIcon className={styles.icon} icon={faThumbsUp} />
+                                    </button>
 
-                                    <FontAwesomeIcon className={styles.icon} icon={faChevronDown} />
+                                    <button>
+                                        <FontAwesomeIcon className={styles.icon} icon={faChevronDown} />
+                                    </button>
 
                                 </div>
 

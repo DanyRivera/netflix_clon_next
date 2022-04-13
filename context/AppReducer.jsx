@@ -6,10 +6,11 @@ export default (state, action) => {
 
     switch (action.type) {
 
-        // case xd : 
-        //     return {
-
-        //     }
+        case AGREGAR_PELICULA : 
+            return {
+                ...state,
+                miLista: [...state.miLista, action.payload]
+            }
 
 
         default:
