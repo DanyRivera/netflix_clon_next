@@ -26,7 +26,9 @@ const Header = () => {
                             <a>Tv Shows</a>
                             <a>Movies</a>
                             <a>New & Popular</a>
-                            <a>My List</a>
+
+                            <Link href="/my-list">My List</Link>
+                            
                         </nav>
                     </div>
 

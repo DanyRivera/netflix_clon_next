@@ -30,10 +30,19 @@ const ListadoPeliculas = ({ peliculas, heading, tematica }) => {
                             <div className={styles.info}>
 
                                 <div className={styles.opciones}>
+
                                     <FontAwesomeIcon className={styles.icon} icon={faPlay} />
-                                    <FontAwesomeIcon className={styles.icon} icon={faPlus} />
+
+                                    <button
+                                        // onClick={e => }
+                                    >
+                                        <FontAwesomeIcon className={styles.icon} icon={faPlus} />
+                                    </button>
+
                                     <FontAwesomeIcon className={styles.icon} icon={faThumbsUp} />
+
                                     <FontAwesomeIcon className={styles.icon} icon={faChevronDown} />
+
                                 </div>
 
 

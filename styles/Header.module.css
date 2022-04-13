@@ -2,6 +2,7 @@
     background: linear-gradient(to bottom, #000000 , rgba(0, 0, 0, 0));
     position: absolute;
     width: 100%;  
+    z-index: 2;
 }
 
 .barra {
@@ -57,11 +58,12 @@
     color: #fff;
     font-size: 1.7rem;
     transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
 } 
 
 .navegacion a:hover {
     color: gray;
-    cursor: pointer;
 }
 
 .opciones {

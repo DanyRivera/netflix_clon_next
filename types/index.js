@@ -1,0 +1,1 @@
+export const AGREGAR_PELICULA = 'AGREGAR_PELICULA';

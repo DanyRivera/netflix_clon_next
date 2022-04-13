@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import AppSatate from '../context/AppState';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <AppSatate>
+      <Component {...pageProps} />
+    </AppSatate>
+  )
 }
 
 export default MyApp
