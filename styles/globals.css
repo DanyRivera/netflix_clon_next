@@ -39,4 +39,8 @@ img {
   width: 95%;
 }
 
+[class*='separacion'] {
+  padding: 10rem 0;
+}
+
 

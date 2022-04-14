@@ -1,0 +1,11 @@
+.heading {
+    color: #fff;
+    margin: 0;
+    margin-bottom: 7.5rem;
+}
+
+.error {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}

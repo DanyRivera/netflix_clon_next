@@ -1,12 +1,12 @@
 import {
     AGREGAR_PELICULA
-  } from '../types';
+} from '../types';
 
 export default (state, action) => {
 
     switch (action.type) {
 
-        case AGREGAR_PELICULA : 
+        case AGREGAR_PELICULA:
             return {
                 ...state,
                 miLista: [...state.miLista, action.payload]

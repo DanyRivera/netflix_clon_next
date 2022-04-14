@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 import AppContext from '../context/AppContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPlus, faThumbsUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +8,16 @@ import styles from "../styles/ListadoPeliculas.module.css";
 
 const ListadoPeliculas = ({ peliculas, heading, tematica }) => {
 
-    const peliculasArr = peliculas.Search;
-
     const { setLista } = useContext(AppContext);
 
-    // const handleClick = (pelicula) => {
+    const router = useRouter();
+    const ruta = router.route
 
-    //     console.log(pelicula)
-    // }
+    const peliculasArr = peliculas.filter(pelicula => pelicula.Poster !== "N/A");
+
+    const handleClick = id => {
+        router.push(`/view/${id}`);
+    }
 
     return (
 
@@ -25,25 +28,32 @@ const ListadoPeliculas = ({ peliculas, heading, tematica }) => {
                 <h2 className={styles.tematica}>{tematica}</h2>
 
                 <div
-                    className={styles.listado}
+                    className={ruta == '/' ? styles.listadoHome : styles.listado}
                 >
-                    {peliculas.Search.map(pelicula => (
+                    {peliculasArr.map(pelicula => (
                         <div
                             key={pelicula.imdbID}
                             className={styles.pelicula}
                         >
-                            <Image width={450} height={800} src={pelicula.Poster} />
+                            <Image
+                                width={450}
+                                height={800}
+                                src={pelicula.Poster}
+                                alt={`${pelicula.Title} Poster`}
+                            />
 
                             <div className={styles.info}>
 
                                 <div className={styles.opciones}>
 
-                                    <button>
+                                    <button
+                                        onClick={() => handleClick(pelicula.imdbID)}
+                                    >
                                         <FontAwesomeIcon className={styles.icon} icon={faPlay} />
                                     </button>
 
                                     <button
-                                    onClick={() => setLista(pelicula)}
+                                        onClick={() => setLista(pelicula)}
                                     >
                                         <FontAwesomeIcon className={styles.icon} icon={faPlus} />
                                     </button>

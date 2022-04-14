@@ -2,13 +2,13 @@ import { useReducer } from "react"
 import AppContext from "./AppContext"
 import AppReducer from "./AppReducer"
 import {
-  AGREGAR_PELICULA
+  AGREGAR_PELICULA,
 } from '../types';
 
 const AppSatate = (props) => {
 
   const initialState = {
-    miLista: []
+    miLista: [],
   }
 
   const [state, dispatch] = useReducer(AppReducer, initialState);
@@ -20,11 +20,12 @@ const AppSatate = (props) => {
     })
   }
 
+
   return (
     <AppContext.Provider
       value={{
         miLista: state.miLista,
-        setLista
+        setLista,
       }}
     >
       {props.children}

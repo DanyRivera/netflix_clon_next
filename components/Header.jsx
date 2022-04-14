@@ -22,20 +22,24 @@ const Header = () => {
                         </div>
 
                         <nav className={styles.navegacion}>
-                            <a>Home</a>
+
+                            <Link href="/">Home</Link>
+
                             <a>Tv Shows</a>
                             <a>Movies</a>
                             <a>New & Popular</a>
 
                             <Link href="/my-list">My List</Link>
-                            
+
                         </nav>
                     </div>
 
                     <div className={styles.opciones}>
 
                         <div>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <Link href="/search" >
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </Link>
                         </div>
 
                         <p>Kids</p>

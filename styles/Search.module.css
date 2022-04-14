@@ -1,0 +1,62 @@
+.contenido {
+    text-align: center;
+}
+
+.contenido h1 {
+    color: #fff;
+    font-size: 3.3rem;
+}
+
+@media (min-width: 768px) {
+    .contenido h1 {
+        font-size: 5rem;
+    }
+}
+
+.campo {
+    position: relative;
+}
+
+.campo input {
+    width: 90%;
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.9rem;
+}
+
+.enviar {
+    all: unset;
+    position: absolute;
+    right: 3.5rem;
+    bottom: .8rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .campo input {
+        width: 50%;
+        padding: 1.5rem;
+        font-size: 1.9rem;
+    }
+
+    .enviar {
+        all: unset;
+        position: absolute;
+        bottom: 1.2rem;
+        right: 41rem;
+        cursor: pointer;
+    }
+
+}
+
+.error {
+    color: #fff;
+    background-color: red;
+    width: 50%;
+    margin: 4rem auto 0 auto;
+    padding: 1rem 0;
+    border-radius: 10px;
+}

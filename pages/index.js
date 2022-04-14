@@ -45,23 +45,23 @@ export default function Home({ peliculasAccion, peliculasAventura, peliculasInfa
       <main>
 
         <ListadoPeliculas
-          peliculas={peliculasAccion}
+          peliculas={peliculasAccion.Search}
           heading={true}
           tematica="Accion"
         />
 
         <ListadoPeliculas
-          peliculas={peliculasAventura}
+          peliculas={peliculasAventura.Search}
           tematica="Aventura"
         />
 
         <ListadoPeliculas
-          peliculas={peliculasInfantiles}
+          peliculas={peliculasInfantiles.Search}
           tematica="Infantiles"
         /> 
 
         <ListadoPeliculas
-          peliculas={peliculasTerror}
+          peliculas={peliculasTerror.Search}
           tematica="Terror"
         />  
 
