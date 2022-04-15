@@ -5,7 +5,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../components/Layout";
 import styles from "../styles/Search.module.css";
 
-const search = () => {
+const Search = () => {
 
     const router = useRouter();
 
@@ -69,4 +69,4 @@ const search = () => {
     )
 }
 
-export default search
+export default Search
